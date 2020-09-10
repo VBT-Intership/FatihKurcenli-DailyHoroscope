@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constant/constant.dart';
 import '../model/error_model.dart';
 import '../model/horoscope_model.dart';
 import '../viewModel/home_page_view_model.dart';
@@ -72,9 +73,9 @@ class HomePageView extends HomePageViewModel {
               itemCount: city.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: 0.6,
-                crossAxisSpacing: 30.0,
-                mainAxisSpacing: 30.0,
+                childAspectRatio: AppConstansts.childAspectRatioValue,
+                crossAxisSpacing: AppConstansts.crossAxisSpacingValue,
+                mainAxisSpacing: AppConstansts.mainAxisSpacingValue,
               ),
               itemBuilder: (context, index) {
                 return Transform.translate(
